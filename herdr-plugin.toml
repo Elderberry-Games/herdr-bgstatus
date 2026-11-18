@@ -1,0 +1,21 @@
+id = "elderberry.bgstatus"
+name = "bgstatus"
+version = "0.1.0"
+min_herdr_version = "0.9.1"
+description = "Spinner and count next to agents that still have background shells, terminals, tasks, or agents (Claude Code, Codex, OpenCode). No inference."
+platforms = ["linux", "macos"]
+
+[[startup]]
+command = ["python3", "bgstatus.py", "start"]
+
+[[actions]]
+id = "restart"
+title = "bgstatus: restart"
+contexts = ["workspace"]
+command = ["python3", "bgstatus.py", "restart"]
+
+[[actions]]
+id = "stop"
+title = "bgstatus: stop"
+contexts = ["workspace"]
+command = ["python3", "bgstatus.py", "stop"]
